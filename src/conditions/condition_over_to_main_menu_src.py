@@ -16,6 +16,7 @@ class ConditionOverToMainMenu:
 
     def treat(self, tick, detailed_description, incoming):
         detailed_description["bulk"].clean_bulk()
+        detailed_description["score"] = 0
         self.next_site = PARAMETERS["sites_names"][1]
 
     def get_known_next_site(self):
