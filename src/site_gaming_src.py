@@ -88,7 +88,7 @@ class SiteGaming:
                              figures_colors[details["falling_figure"].shape],
                              block_rectangle,
                              0,
-                             5, 5, 5, 5
+                             10,
                              )
 
         for ix in range(details["bulk"].field_size[0]):
