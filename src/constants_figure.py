@@ -5,9 +5,9 @@ figures_shapes_tuple = ("i", "s", "z", "l", "j", "o", "t")
 figures_colors = {
     figures_shapes_tuple[0]: THECOLORS["linen"],
     figures_shapes_tuple[1]: THECOLORS["gold"],
-    figures_shapes_tuple[2]: THECOLORS["forest" + "green"],
-    figures_shapes_tuple[3]: THECOLORS["dodger" + "blue"],
-    figures_shapes_tuple[4]: THECOLORS["turquoise2"],
+    figures_shapes_tuple[2]: THECOLORS["lime" + "green"],
+    figures_shapes_tuple[3]: THECOLORS["medium" + "blue"],
+    figures_shapes_tuple[4]: THECOLORS["cyan2"],
     figures_shapes_tuple[5]: THECOLORS["purple"],
     figures_shapes_tuple[6]: THECOLORS["red2"]
 }
