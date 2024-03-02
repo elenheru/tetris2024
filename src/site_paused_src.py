@@ -19,7 +19,7 @@ class SitePaused:
             Button(
                 "MAKE GAME OVER",
                 THECOLORS["fire" + "brick"],
-                pg.K_f,
+                pg.K_BACKSPACE,
                 (1200, 100)
             ),
             Button(
