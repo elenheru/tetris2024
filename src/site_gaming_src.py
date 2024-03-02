@@ -70,6 +70,7 @@ class SiteGaming:
             b.prepare(incoming[1], incoming[2], incoming[3])
             self.sf.blit(b.sf_result, b.origin)
 
+        low_place_highlight = set()
         if not details["falling_figure"].top_left_block_position is None:
             falling_figure_blocks = details["falling_figure"].build_set_of_blocks(
                 None,
@@ -90,6 +91,21 @@ class SiteGaming:
                              0,
                              10,
                              )
+                low_place_highlight.add(block[0])
+
+        for h in low_place_highlight:
+            highlight_rectangle = \
+                tuple((
+                    PARAMETERS["playground_right_shift_px"] + h * details["bulk"].block_size + 1,
+                    details["bulk"].block_size // 8 + PARAMETERS["playground_height"] * details["bulk"].block_size,
+                    details["bulk"].block_size - 2,
+                    details["bulk"].block_size // 8
+                ))
+            pg.draw.rect(self.sf,
+                         figures_colors[details["falling_figure"].shape],
+                         highlight_rectangle,
+                         0,
+                         )
 
         for ix in range(details["bulk"].field_size[0]):
             for iy in range(details["bulk"].field_size[1]):
