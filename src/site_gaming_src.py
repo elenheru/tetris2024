@@ -135,4 +135,3 @@ class SiteGaming:
                 THECOLORS["orange"])
 
         self.sf.blit(score_surface, PARAMETERS["score_position"])
-        # TODO highlight place where the figure is falling to
