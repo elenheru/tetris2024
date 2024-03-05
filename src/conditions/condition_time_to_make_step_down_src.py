@@ -9,7 +9,9 @@ class ConditionTimeToMakeStepDown:
 
     @staticmethod
     def check(tick, detailed_description, incoming, buttons):
-        return tick % PARAMETERS["step_time_divisor"] == PARAMETERS["step_time_divisor"] // 2
+        divisor = max(PARAMETERS["step_time_divisor"] - (detailed_description["score"] // 10),
+                      PARAMETERS["step_time_divisor"] // 2)
+        return tick % divisor == divisor // 2
 
     @staticmethod
     def treat(tick, detailed_description, incoming):
